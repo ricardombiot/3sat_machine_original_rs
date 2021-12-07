@@ -9,7 +9,7 @@ impl GPow {
             return;
         }
 
-        GPow::_add_node_set_owners(self, map_id_node);
+        self._add_node_set_owners(map_id_node);
         self.current_step += 1;
         self.map_parent_id = Some(map_id_node);
     }
@@ -23,7 +23,7 @@ impl GPow {
         self.lines_table.insert(self.current_step, initial_set_step);
         self.owners_table.insert(path_id_node, self.owners.clone());
 
-        GPow::_add_as_owner_of_all(self, path_id_node);
+        self._add_as_owner_of_all(path_id_node);
     }
 
     fn _add_as_owner_of_all(&mut self, path_id_node: PathNodeId) {

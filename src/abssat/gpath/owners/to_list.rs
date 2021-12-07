@@ -6,7 +6,7 @@ use crate::abssat::gpath::owners::Owners49;
 
 
 impl Owners49 {
-    pub fn to_list_step(&mut self, step : usize) -> Vec<PathNodeId> {
+    pub fn to_list_step(&self, step : usize) -> Vec<PathNodeId> {
         let mut list : Vec<PathNodeId> = Vec::new();
 
         let value = self.secure_get(step);

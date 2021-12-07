@@ -4,6 +4,10 @@ use crate::abssat::gpath::gpow::GPow;
 
 impl GPow {
 
+    pub fn is_valid(&self) -> bool {
+        self.is_valid
+    }
+
     pub fn get_map_parent_id(&self) -> &OptionalNodeId {
         return &self.map_parent_id;
     }

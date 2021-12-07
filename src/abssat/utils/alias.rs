@@ -6,6 +6,7 @@ pub type OptionalNodeId = Option<NodeId>;
 
 use std::collections::HashSet;
 
+pub type SetNodesId = HashSet<NodeId>;
 pub type SetPathNodesId = HashSet<PathNodeId>;
 
 pub fn create_new_path_id(id : NodeId, parent_id : OptionalNodeId) -> PathNodeId {
