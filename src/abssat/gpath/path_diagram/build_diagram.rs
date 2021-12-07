@@ -1,15 +1,9 @@
-use crate::abssat::gpath::visual::PathDiagram;
-use crate::abssat::gpath::visual::GPow;
+use crate::abssat::gpath::path_diagram::PathDiagram;
+use crate::abssat::gpath::path_diagram::GPow;
 use crate::abssat::utils::alias::{PathNodeId, Step, path_id_as_key};
 
 impl<'a> PathDiagram<'a> {
 
-    pub fn build(graph : &'a GPow) -> PathDiagram {
-        let mut diagram = PathDiagram::new(graph);
-        diagram.build_diagram();
-
-        return diagram;
-    }
 
     pub fn build_diagram(&mut self){
         self.dot_txt += "digraph G {\n";
@@ -43,7 +37,8 @@ impl<'a> PathDiagram<'a> {
         let key = path_id_as_key(path_id_node);
         let title = "";
         //let mut node_label_html = String::new();
-        let node_label_html = format!("<{}<BR /> ID: {} <BR />>", title, key);
+        let owners_txt = self.draw_owners(path_id_node);
+        let node_label_html = format!("<{}<BR /> ID: {} <BR /> {}>", title, key, owners_txt);
         /*#node_label_html *= "Using: [$list_using_me]<BR />"
 
         #node_label_html *= "Requires: [$list_requires] <BR />"
@@ -56,6 +51,23 @@ impl<'a> PathDiagram<'a> {
         self.dot_txt += &format!("{} [label={}]", key, node_label_html).to_owned();
     }
 
+    fn draw_owners(&mut self, path_id_node : PathNodeId) -> String {
+        let mut txt = String::new();
+        txt += "<BR />\n";
+        let owners_node = self.graph.get_node_owners(path_id_node).unwrap();
+        for step in 0..self.graph.get_current_step() {
+            txt += &format!("[STEP: {}]", step);
+            for node_id in owners_node.to_list_step(step as usize) {
+                let key_owner = path_id_as_key(node_id);
+                txt += &format!("{},", key_owner)
+            }
+
+            txt += "<BR />\n";
+        }
+
+        return txt;
+    }
+
     fn draw_relations(&mut self){
         for step in 0..self.graph.get_current_step() {
             for path_id_node in self.graph.get_set_line(step) {
@@ -63,7 +75,7 @@ impl<'a> PathDiagram<'a> {
                 for node_id_son in self.graph.get_node_sons_owners(path_id_node) {
                     let key_destine = path_id_as_key(node_id_son);
 
-                    self.dot_txt += &format!("{} -> {}", key_origin, key_destine).to_owned();
+                    self.dot_txt += &format!("{} -> {}\n", key_origin, key_destine).to_owned();
                 }
             }
         }

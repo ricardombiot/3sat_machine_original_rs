@@ -3,17 +3,20 @@ use std::path::Path;
 use std::fs::File;
 use std::io::prelude::*;
 use std::process::Command;
-use crate::abssat::gpath::visual::PathDiagram;
+use crate::abssat::gpath::path_diagram::PathDiagram;
 
 impl<'a> PathDiagram<'a> {
 
-    pub fn to_png(&self, name : String, path : &Path){
-        let display = path.display();
-        let input_file = format!("{}/{}", display,name);
-        let output_file = format!("{}/{}", display,name);
+    pub fn to_png(&self, name : &str, path_str : &str){
+        let input_file = format!("{}/{}.dot", path_str,name);
+        let output_file = format!("{}/{}.png", path_str,name);
+
+        let path_input_file = Path::new(&input_file);
+        let display = path_input_file.display();
+        //let path_output_file = Path::new(&output_file);
 
         // Open a file in write-only mode, returns `io::Result<File>`
-        let mut file = match File::create(&path) {
+        let mut file = match File::create(&path_input_file) {
             Err(why) => panic!("couldn't create {}: {}", display, why),
             Ok(file) => file,
         };

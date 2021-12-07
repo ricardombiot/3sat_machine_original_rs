@@ -12,6 +12,10 @@ impl<'a> PathDiagram<'a> {
         let dot_txt = String::new();
         Self {graph, dot_txt}
     }
+
+    pub fn get_dot_txt(&self) -> &String {
+        return &self.dot_txt
+    }
 }
 
 mod build_diagram;
