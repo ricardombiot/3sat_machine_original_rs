@@ -20,6 +20,15 @@ impl GPow {
         return self.owners.is(path_id_node);
     }
 
+    pub fn get_set_line(&self, step : Step) -> SetPathNodesId {
+        let result = match self.lines_table.get(&step) {
+            None => SetPathNodesId::new(),
+            Some(set) => set.clone()
+        };
+
+        return result;
+    }
+
     pub fn get_node_owners(&self, path_id_node : PathNodeId) -> Option<&Owners49> {
         return self.owners_table.get(&path_id_node);
     }

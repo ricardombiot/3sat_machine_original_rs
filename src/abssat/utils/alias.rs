@@ -18,3 +18,18 @@ pub fn create_new_path_id(id : NodeId, parent_id : OptionalNodeId) -> PathNodeId
     let path_node_id : PathNodeId = (id, parent_id);
     return path_node_id;
 }
+
+pub fn path_id_as_key(path_id_node : PathNodeId) -> String {
+    let destine = map_id_as_key(Some(path_id_node.0));
+    let origin = map_id_as_key(Some(path_id_node.1));
+    return format!("{}_{}",destine,origin);
+}
+
+pub fn map_id_as_key(map_id_node : OptionalNodeId) -> String  {
+    if map_id_node.is_none() {
+        return "root".to_owned();
+    }else{
+        let map_id_node = map_id_node.unwrap();
+        return format!("{}_{}",map_id_node.0,map_id_node.1);
+    }
+}
