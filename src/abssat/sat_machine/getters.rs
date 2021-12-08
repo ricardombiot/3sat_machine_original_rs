@@ -4,6 +4,14 @@ use crate::abssat::sat_machine::SatMachine;
 
 impl SatMachine {
 
+    pub fn is_valid(&self) -> bool {
+       return self.is_valid;
+    }
+
+    pub fn have_solution(&self) -> bool {
+        return self.is_valid && self.is_close
+    }
+
     pub fn get_current_step(&self) -> Step {
         return self.current_step;
     }

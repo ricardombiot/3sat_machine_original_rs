@@ -3,7 +3,6 @@
 use crate::abssat::sat_machine::{SatMachine, init_timeline, Timeline};
 use crate::abssat::utils::alias::{LiteralsGateOr,LiteralsGateOrSteps};
 use crate::abssat::sat_machine::GPow;
-use crate::abssat::sat_machine::Step;
 
 use super::OptionalGPow;
 
@@ -18,9 +17,9 @@ impl SatMachine {
             
             for index_tl in 0..7 {
                 let cell_tl = self.timeline[index_tl].as_ref();
-                println!("Step: {} Cell: {}", self.current_step,index_tl);
+                //println!("Step: {} Cell: {}", self.current_step,index_tl);
                 if cell_tl.is_some() {
-                    println!("Is some..");
+                    //println!("Is some..");
                     is_valid = true;
 
                     let gpath = cell_tl.unwrap();
@@ -70,7 +69,7 @@ impl SatMachine {
 
         for (case_index ,case_indexes, mut gpath) in case_gpaths.drain(..) {
             let requires = SatMachine::build_requires(literals_steps, case_indexes);
-            println!("{:?}",requires);
+            //println!("{:?}",requires);
             let map_id_node = (self.current_step, case_index);
             gpath.do_up_filtering(requires, map_id_node);
             SatMachine::do_impact(next_step_timeline, gpath, case_index);
@@ -80,7 +79,7 @@ impl SatMachine {
     fn do_impact(next_step_timeline : &mut Timeline, gpath : GPow, case_index : i32){
         if gpath.is_valid(){
             let case_index : usize = case_index as usize;
-            println!("Impact on {}..", case_index);
+            //println!("Impact on {}..", case_index);
             match &mut next_step_timeline[case_index] {
                 None => {
                     next_step_timeline[case_index] = Some(gpath);
@@ -90,22 +89,23 @@ impl SatMachine {
                     drop(gpath);
                 }
             }
-        }else{
-            println!("Impact on INVALID {}..", case_index);
         }
+        /*else{
+            println!("Impact on INVALID {}..", case_index);
+        }*/
     }
 
 
-    pub fn make_step_fusion(&mut self) {
+    pub fn make_close_step(&mut self) {
         let mut fusion_gpath : OptionalGPow = None;
 
         if self.is_valid { 
             let mut is_valid = false;
             for index_tl in 0..7 {
                 let cell_tl = self.timeline[index_tl].as_mut();
-                println!("Step: {} Cell: {}", self.current_step,index_tl);
+                //println!("Step: {} Cell: {}", self.current_step,index_tl);
                 if cell_tl.is_some() {
-                    println!("Some for fusion...");
+                    //println!("Some for fusion...");
                     is_valid = true;
     
                     let gpath = cell_tl.unwrap();
@@ -122,12 +122,14 @@ impl SatMachine {
 
             self.timeline = init_timeline();
             self.timeline[0] = fusion_gpath;
-            println!("{:?}", self.timeline[0]);
+            //println!("{:?}", self.timeline[0]);
             self.current_step += 1;
             self.is_valid = is_valid;
-        }else{
-            println!("invalid.. make step fusion");
+            self.is_close = true;
         }
+        /*else{
+            println!("invalid.. make step fusion");
+        }*/
     }
 
 

@@ -1,7 +1,7 @@
 use crate::abssat::gpath::{gpow::GPow};
 use crate::abssat::gpath::path_diagram::PathDiagram;
-use std::path::Path;
-use std::fs;
+//use std::path::Path;
+//use std::fs;
 
 #[test]
 fn test_diagram_gpow() -> std::io::Result<()> {

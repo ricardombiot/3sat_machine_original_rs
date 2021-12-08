@@ -1,4 +1,4 @@
-use crate::abssat::{gpath::{gpow::GPow, path_diagram::PathDiagram}, utils::alias::{SetNodesId, SetPathNodesId}};
+use crate::abssat::{gpath::{gpow::GPow, path_diagram::PathDiagram}, utils::alias::{SetNodesId}};
 
 
 /*

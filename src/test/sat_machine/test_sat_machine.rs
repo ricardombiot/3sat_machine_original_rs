@@ -18,7 +18,7 @@ fn test_sat_machine(){
     diagram.to_png("sat_machine_simple_init", "test_visual");
 
     machine.make_step((1,1,1));
-    machine.make_step_fusion();
+    machine.make_close_step();
  
     let clauses = 1;
     assert_eq!(machine.get_current_step(), (n_vars*2)+1+clauses+1 );

@@ -10,7 +10,8 @@ pub struct SatMachine {
     timeline : Timeline,
     current_step : Step,
     n_vars : i32,
-    is_valid : bool
+    is_valid : bool,
+    is_close : bool
 }
 
 fn init_timeline() -> Timeline {
@@ -22,3 +23,4 @@ mod initialize;
 mod getters;
 mod literals;
 mod step_or;
+mod load_cnf;

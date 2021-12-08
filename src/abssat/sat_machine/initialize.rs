@@ -1,6 +1,5 @@
 
 use crate::abssat::gpath::gpow::GPow;
-pub type OptionalGPow = Option<GPow>;
 use crate::abssat::sat_machine::{SatMachine, init_timeline};
 
 impl SatMachine {
@@ -8,7 +7,8 @@ impl SatMachine {
         let current_step = 0;
         let timeline  = init_timeline();
         let is_valid = true;
-        let mut machine = SatMachine { timeline, current_step, n_vars , is_valid};
+        let is_close = false;
+        let mut machine = SatMachine { timeline, current_step, n_vars , is_valid, is_close};
         machine.init();
         return machine;
     }
