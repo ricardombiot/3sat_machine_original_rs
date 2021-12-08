@@ -60,10 +60,13 @@ impl GPow {
             let next_step = step_node+1;
             let myowners = self.get_node_owners(path_id_node).unwrap();
             
-            for path_id_node_son in self.lines_table.get(&next_step).unwrap() {
-                let is_son = myowners.is(*path_id_node_son);
-                if is_son {
-                    set_sons.insert(*path_id_node_son);
+            let set_step = self.lines_table.get(&next_step);
+            if set_step.is_some(){
+                for path_id_node_son in set_step.unwrap() {
+                    let is_son = myowners.is(*path_id_node_son);
+                    if is_son {
+                        set_sons.insert(*path_id_node_son);
+                    }
                 }
             }
         }

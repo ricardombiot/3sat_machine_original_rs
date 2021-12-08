@@ -1,6 +1,7 @@
 pub mod abssat {
     pub mod gpath;
     pub mod utils;
+    pub mod sat_machine;
 }
 
 #[cfg(test)]

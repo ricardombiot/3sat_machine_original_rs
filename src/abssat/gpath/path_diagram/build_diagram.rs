@@ -1,5 +1,5 @@
 use crate::abssat::gpath::path_diagram::PathDiagram;
-use crate::abssat::gpath::path_diagram::GPow;
+//use crate::abssat::gpath::path_diagram::GPow;
 use crate::abssat::utils::alias::{PathNodeId, Step, path_id_as_key};
 
 impl<'a> PathDiagram<'a> {

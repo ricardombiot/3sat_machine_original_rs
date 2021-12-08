@@ -1,4 +1,8 @@
 pub type Step = i32;
+
+pub type LiteralsGateOr = (i32,i32,i32);
+pub type LiteralsGateOrSteps = (Step,Step,Step);
+
 pub type Index = i32;
 pub type NodeId = (Step, Index);
 pub type PathNodeId = (NodeId, NodeId);

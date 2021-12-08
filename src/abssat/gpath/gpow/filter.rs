@@ -24,7 +24,7 @@ impl GPow {
         let set_line = self.lines_table.get(&step_selection).unwrap();
         for path_id_node in set_line {
             let is_require = path_id_node.0 == map_node_id_req;
-            if is_require {
+            if !is_require {
                 self.nodes_to_remove.insert(*path_id_node);
             }
         }
@@ -163,80 +163,4 @@ impl GPow {
         return self.nodes_to_remove.contains(&path_id_node)
     }
 
-    /*
-    #=
-Los owners deben ser coherentes con sus padres e hijos
-=#
-function review_owners_parents_sons!(gpath :: GPow)
-    if gpath.is_valid && gpath.review_owners
-        # Top to down
-        # hago la union de los owners de mis padres y la intersectiono conmigo
-        for step in 1:gpath.current_step-1
-            line_set = gpath.lines_table[step]
-            for node_id in line_set
-                if !is_pending_to_remove(gpath, node_id)
-                    union_owners_parents = SetPathNodesId()
-                    parents = get_node_parents_owners(gpath, node_id)
-
-                    # no tiene padres y debería tenerlos.
-                    if isempty(parents)
-                        Base.push!(gpath.nodes_to_remove, node_id)
-                    else
-                        for node_id_parent in parents
-                            set_owners_parent = get_node_set_owners(gpath, node_id_parent)
-                            Base.union!(union_owners_parents, set_owners_parent)
-                        end
-
-                        set_node_owners = get_node_set_owners(gpath, node_id)
-                        Base.intersect!(set_node_owners, set_owners_parent)
-                        # podría ser invalido si en algun paso no tiene owners...
-                        # we will use review_chainowners!
-                    end
-                end
-            end
-        end
-    end
-
-end
-    */
-
-    /*
-    function clean_invalid_nodes!(gpath :: GPow)
-    for step in 0:gpath.current_step-1
-        union_owners_step = SetPathNodesId()
-
-        line_set = gpath.lines_table[step]
-        for node_id in line_set
-            if is_owner(gpath, node_id)
-                set_owners_node = get_node_set_owners(gpath, node_id)
-                Base.intersect!(set_owners_node, gpath.owners_set)
-                Base.union!(union_owners_step, set_owners_node)
-            else
-                Base.delete!(line_set, node_id)
-                Base.delete!(gpath.owners_table, node_id)
-            end
-        end
-
-        if isempty(line_set)
-            gpath.is_valid = false
-        else
-            review_chainowners!(gpath, union_owners_step)
-        end
-    end
-end
-    */
 }
-
-/*
-function filter!(gpath :: GPow, requires :: SetNodesId)
-    gpath.nodes_to_remove = SetPathNodesId()
-    for map_node_id in requires
-        register_filter_nodes_by_require!(gpath, map_node_id)
-    end
-
-    if !isempty(gpath.nodes_to_remove)
-        gpath.review_owners = true
-        make_review_owners!(gpath)
-    end
-end
-*/

@@ -1,9 +1,14 @@
 
 
 use crate::abssat::gpath::gpow::GPow;
-use crate::abssat::utils::alias::{NodeId,PathNodeId, SetPathNodesId ,create_new_path_id};
+use crate::abssat::utils::alias::{NodeId,SetNodesId, PathNodeId, SetPathNodesId ,create_new_path_id};
 
 impl GPow {
+    pub fn do_up_filtering(&mut self, requires : SetNodesId, map_id_node : NodeId){
+        self.filter(requires);
+        self.do_up(map_id_node);
+    }
+
     pub fn do_up(&mut self, map_id_node : NodeId){
         if !self.is_valid {
             return;

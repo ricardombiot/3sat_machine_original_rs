@@ -1,4 +1,4 @@
-use crate::abssat::gpath::{gpow::GPow, path_diagram::PathDiagram};
+use crate::abssat::{gpath::{gpow::GPow, path_diagram::PathDiagram}, utils::alias::{SetNodesId, SetPathNodesId}};
 
 
 /*
@@ -79,4 +79,16 @@ fn test_join_gpow(){
     diagram.build_diagram();
     diagram.to_png("fusion", "test_visual");
 
+    let mut gpath_fusion = gpath_w0;
+    test_filter(&mut gpath_fusion);
+}
+
+fn test_filter(gpath : &mut GPow){
+    let mut requires = SetNodesId::new();
+    requires.insert((0,0));
+    gpath.filter(requires);
+
+    let mut diagram = PathDiagram::new(&gpath);
+    diagram.build_diagram();
+    diagram.to_png("filter_path0_0", "test_visual");
 }
