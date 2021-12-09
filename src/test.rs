@@ -18,4 +18,6 @@ pub mod gpath {
 pub mod sat_machine {
     pub mod test_sat_machine;
     pub mod test_sat_machine_cnf;
+
+    pub mod test_sat_cnf;
 }

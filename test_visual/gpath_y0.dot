@@ -4,15 +4,15 @@ subgraph cluster_line_0 {
  style=filled;
  color=lightgrey; 
      node [style=filled,color=white]; 
-k0_1_r [label=<<BR /> ID: k0_1_r <BR /> <BR />
-[STEP: 0]k0_1_r,<BR />
-[STEP: 1]k1_0_k0_1,<BR />
-[STEP: 2]k2_0_k1_0,<BR />
-[STEP: 3]k3_1_k2_0,<BR />
->]k0_0_r [label=<<BR /> ID: k0_0_r <BR /> <BR />
+k0_0_r [label=<<BR /> ID: k0_0_r <BR /> <BR />
 [STEP: 0]k0_0_r,<BR />
 [STEP: 1]k1_1_k0_0,<BR />
 [STEP: 2]k2_0_k1_1,<BR />
+[STEP: 3]k3_1_k2_0,<BR />
+>]k0_1_r [label=<<BR /> ID: k0_1_r <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_0_k1_0,<BR />
 [STEP: 3]k3_1_k2_0,<BR />
 >]
      fontsize="12" 
@@ -40,15 +40,15 @@ subgraph cluster_line_2 {
  style=filled;
  color=lightgrey; 
      node [style=filled,color=white]; 
-k2_0_k1_1 [label=<<BR /> ID: k2_0_k1_1 <BR /> <BR />
-[STEP: 0]k0_0_r,<BR />
-[STEP: 1]k1_1_k0_0,<BR />
-[STEP: 2]k2_0_k1_1,<BR />
-[STEP: 3]k3_1_k2_0,<BR />
->]k2_0_k1_0 [label=<<BR /> ID: k2_0_k1_0 <BR /> <BR />
+k2_0_k1_0 [label=<<BR /> ID: k2_0_k1_0 <BR /> <BR />
 [STEP: 0]k0_1_r,<BR />
 [STEP: 1]k1_0_k0_1,<BR />
 [STEP: 2]k2_0_k1_0,<BR />
+[STEP: 3]k3_1_k2_0,<BR />
+>]k2_0_k1_1 [label=<<BR /> ID: k2_0_k1_1 <BR /> <BR />
+[STEP: 0]k0_0_r,<BR />
+[STEP: 1]k1_1_k0_0,<BR />
+[STEP: 2]k2_0_k1_1,<BR />
 [STEP: 3]k3_1_k2_0,<BR />
 >]
      fontsize="12" 
@@ -67,10 +67,10 @@ k3_1_k2_0 [label=<<BR /> ID: k3_1_k2_0 <BR /> <BR />
      fontsize="12" 
      label = "Line 3 " 
  }
-k0_1_r -> k1_0_k0_1
 k0_0_r -> k1_1_k0_0
+k0_1_r -> k1_0_k0_1
 k1_1_k0_0 -> k2_0_k1_1
 k1_0_k0_1 -> k2_0_k1_0
-k2_0_k1_1 -> k3_1_k2_0
 k2_0_k1_0 -> k3_1_k2_0
+k2_0_k1_1 -> k3_1_k2_0
 }
