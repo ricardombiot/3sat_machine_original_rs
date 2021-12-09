@@ -1,6 +1,6 @@
 
 
-use crate::abssat::sat_machine::SatMachine;
+use crate::abssat::{reader::Reader, sat_machine::SatMachine};
 
 #[test]
 fn test_sat_machine_cnf_import(){
@@ -9,6 +9,12 @@ fn test_sat_machine_cnf_import(){
 
     assert_eq!(machine.is_valid(),true);
     assert_eq!(machine.have_solution(),true);
+
+    let mut reader = Reader::new(&machine);
+    assert_eq!(reader.get_stop_step(),(3*2));
+
+    reader.read();
+    println!("SOLUTION: {:?}", reader.get_solution());
 }
 
 #[test]

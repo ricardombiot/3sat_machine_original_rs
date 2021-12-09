@@ -1,6 +1,7 @@
 use std::time::Instant;
 use crate::abssat::sat_machine::SatMachine;
 
+/*
 #[test]
 fn test_set12080_20211208_i1_v20_c80(){
     let now = Instant::now();
@@ -14,7 +15,7 @@ fn test_set12080_20211208_i1_v20_c80(){
 
 }
 
-/* 
+ 
 #[test]
 fn test_set130120_20211208_i1_v30_c120(){
     let now = Instant::now();

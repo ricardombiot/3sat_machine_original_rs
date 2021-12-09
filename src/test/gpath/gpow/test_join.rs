@@ -86,7 +86,7 @@ fn test_join_gpow(){
 fn test_filter(gpath : &mut GPow){
     let mut requires = SetNodesId::new();
     requires.insert((0,0));
-    gpath.filter(requires);
+    gpath.do_filter(requires);
 
     let mut diagram = PathDiagram::new(&gpath);
     diagram.build_diagram();

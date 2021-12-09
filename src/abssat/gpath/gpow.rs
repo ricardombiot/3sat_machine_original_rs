@@ -17,6 +17,13 @@ pub struct GPow {
     is_valid : bool
 }
 
+pub enum PathNodeKind {
+    NodeLiteral,
+    NodeLiteralNeg,
+    NodeFusion,
+    NodeOr
+}
+
 mod constructor;
 mod up;
 mod join;

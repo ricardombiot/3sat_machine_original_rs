@@ -4,7 +4,7 @@ use crate::abssat::gpath::owners::Owners49;
 use crate::abssat::utils::alias::{NodeId,PathNodeId, SetNodesId, SetPathNodesId};
 
 impl GPow {
-    pub fn filter(&mut self, requires : SetNodesId){
+    pub fn do_filter(&mut self, requires : SetNodesId){
         if self.is_valid {
             self.nodes_to_remove = SetPathNodesId::new();
 

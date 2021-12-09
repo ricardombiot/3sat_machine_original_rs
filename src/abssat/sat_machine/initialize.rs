@@ -8,7 +8,14 @@ impl SatMachine {
         let timeline  = init_timeline();
         let is_valid = true;
         let is_close = false;
-        let mut machine = SatMachine { timeline, current_step, n_vars , is_valid, is_close};
+        let mut machine = SatMachine { 
+                timeline, 
+                current_step, 
+                n_vars , 
+                is_valid, 
+                is_close
+        };
+        
         machine.init();
         return machine;
     }

@@ -1,0 +1,418 @@
+digraph G {
+     compound=true 
+subgraph cluster_line_0 {
+ style=filled;
+ color=lightgrey; 
+     node [style=filled,color=white]; 
+k0_1_r [label=<<BR /> ID: k0_1_r <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
+[STEP: 7]k7_1_k6_0,<BR />
+[STEP: 8]k8_0_k7_1,<BR />
+[STEP: 9]k9_6_k8_0,<BR />
+[STEP: 10]k10_6_k9_6,<BR />
+[STEP: 11]k11_3_k10_6,<BR />
+[STEP: 12]k12_3_k11_3,<BR />
+[STEP: 13]k13_6_k12_3,<BR />
+[STEP: 14]k14_6_k13_6,<BR />
+[STEP: 15]k15_0_k14_6,<BR />
+>]
+     fontsize="12" 
+     label = "Line 0 " 
+ }
+subgraph cluster_line_1 {
+ style=filled;
+ color=lightgrey; 
+     node [style=filled,color=white]; 
+k1_0_k0_1 [label=<<BR /> ID: k1_0_k0_1 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
+[STEP: 7]k7_1_k6_0,<BR />
+[STEP: 8]k8_0_k7_1,<BR />
+[STEP: 9]k9_6_k8_0,<BR />
+[STEP: 10]k10_6_k9_6,<BR />
+[STEP: 11]k11_3_k10_6,<BR />
+[STEP: 12]k12_3_k11_3,<BR />
+[STEP: 13]k13_6_k12_3,<BR />
+[STEP: 14]k14_6_k13_6,<BR />
+[STEP: 15]k15_0_k14_6,<BR />
+>]
+     fontsize="12" 
+     label = "Line 1 " 
+ }
+subgraph cluster_line_2 {
+ style=filled;
+ color=lightgrey; 
+     node [style=filled,color=white]; 
+k2_1_k1_0 [label=<<BR /> ID: k2_1_k1_0 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
+[STEP: 7]k7_1_k6_0,<BR />
+[STEP: 8]k8_0_k7_1,<BR />
+[STEP: 9]k9_6_k8_0,<BR />
+[STEP: 10]k10_6_k9_6,<BR />
+[STEP: 11]k11_3_k10_6,<BR />
+[STEP: 12]k12_3_k11_3,<BR />
+[STEP: 13]k13_6_k12_3,<BR />
+[STEP: 14]k14_6_k13_6,<BR />
+[STEP: 15]k15_0_k14_6,<BR />
+>]
+     fontsize="12" 
+     label = "Line 2 " 
+ }
+subgraph cluster_line_3 {
+ style=filled;
+ color=lightgrey; 
+     node [style=filled,color=white]; 
+k3_0_k2_1 [label=<<BR /> ID: k3_0_k2_1 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
+[STEP: 7]k7_1_k6_0,<BR />
+[STEP: 8]k8_0_k7_1,<BR />
+[STEP: 9]k9_6_k8_0,<BR />
+[STEP: 10]k10_6_k9_6,<BR />
+[STEP: 11]k11_3_k10_6,<BR />
+[STEP: 12]k12_3_k11_3,<BR />
+[STEP: 13]k13_6_k12_3,<BR />
+[STEP: 14]k14_6_k13_6,<BR />
+[STEP: 15]k15_0_k14_6,<BR />
+>]
+     fontsize="12" 
+     label = "Line 3 " 
+ }
+subgraph cluster_line_4 {
+ style=filled;
+ color=lightgrey; 
+     node [style=filled,color=white]; 
+k4_0_k3_0 [label=<<BR /> ID: k4_0_k3_0 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
+[STEP: 7]k7_1_k6_0,<BR />
+[STEP: 8]k8_0_k7_1,<BR />
+[STEP: 9]k9_6_k8_0,<BR />
+[STEP: 10]k10_6_k9_6,<BR />
+[STEP: 11]k11_3_k10_6,<BR />
+[STEP: 12]k12_3_k11_3,<BR />
+[STEP: 13]k13_6_k12_3,<BR />
+[STEP: 14]k14_6_k13_6,<BR />
+[STEP: 15]k15_0_k14_6,<BR />
+>]
+     fontsize="12" 
+     label = "Line 4 " 
+ }
+subgraph cluster_line_5 {
+ style=filled;
+ color=lightgrey; 
+     node [style=filled,color=white]; 
+k5_1_k4_0 [label=<<BR /> ID: k5_1_k4_0 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
+[STEP: 7]k7_1_k6_0,<BR />
+[STEP: 8]k8_0_k7_1,<BR />
+[STEP: 9]k9_6_k8_0,<BR />
+[STEP: 10]k10_6_k9_6,<BR />
+[STEP: 11]k11_3_k10_6,<BR />
+[STEP: 12]k12_3_k11_3,<BR />
+[STEP: 13]k13_6_k12_3,<BR />
+[STEP: 14]k14_6_k13_6,<BR />
+[STEP: 15]k15_0_k14_6,<BR />
+>]
+     fontsize="12" 
+     label = "Line 5 " 
+ }
+subgraph cluster_line_6 {
+ style=filled;
+ color=lightgrey; 
+     node [style=filled,color=white]; 
+k6_0_k5_1 [label=<<BR /> ID: k6_0_k5_1 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
+[STEP: 7]k7_1_k6_0,<BR />
+[STEP: 8]k8_0_k7_1,<BR />
+[STEP: 9]k9_6_k8_0,<BR />
+[STEP: 10]k10_6_k9_6,<BR />
+[STEP: 11]k11_3_k10_6,<BR />
+[STEP: 12]k12_3_k11_3,<BR />
+[STEP: 13]k13_6_k12_3,<BR />
+[STEP: 14]k14_6_k13_6,<BR />
+[STEP: 15]k15_0_k14_6,<BR />
+>]
+     fontsize="12" 
+     label = "Line 6 " 
+ }
+subgraph cluster_line_7 {
+ style=filled;
+ color=lightgrey; 
+     node [style=filled,color=white]; 
+k7_1_k6_0 [label=<<BR /> ID: k7_1_k6_0 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
+[STEP: 7]k7_1_k6_0,<BR />
+[STEP: 8]k8_0_k7_1,<BR />
+[STEP: 9]k9_6_k8_0,<BR />
+[STEP: 10]k10_6_k9_6,<BR />
+[STEP: 11]k11_3_k10_6,<BR />
+[STEP: 12]k12_3_k11_3,<BR />
+[STEP: 13]k13_6_k12_3,<BR />
+[STEP: 14]k14_6_k13_6,<BR />
+[STEP: 15]k15_0_k14_6,<BR />
+>]
+     fontsize="12" 
+     label = "Line 7 " 
+ }
+subgraph cluster_line_8 {
+ style=filled;
+ color=lightgrey; 
+     node [style=filled,color=white]; 
+k8_0_k7_1 [label=<<BR /> ID: k8_0_k7_1 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
+[STEP: 7]k7_1_k6_0,<BR />
+[STEP: 8]k8_0_k7_1,<BR />
+[STEP: 9]k9_6_k8_0,<BR />
+[STEP: 10]k10_6_k9_6,<BR />
+[STEP: 11]k11_3_k10_6,<BR />
+[STEP: 12]k12_3_k11_3,<BR />
+[STEP: 13]k13_6_k12_3,<BR />
+[STEP: 14]k14_6_k13_6,<BR />
+[STEP: 15]k15_0_k14_6,<BR />
+>]
+     fontsize="12" 
+     label = "Line 8 " 
+ }
+subgraph cluster_line_9 {
+ style=filled;
+ color=lightgrey; 
+     node [style=filled,color=white]; 
+k9_6_k8_0 [label=<<BR /> ID: k9_6_k8_0 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
+[STEP: 7]k7_1_k6_0,<BR />
+[STEP: 8]k8_0_k7_1,<BR />
+[STEP: 9]k9_6_k8_0,<BR />
+[STEP: 10]k10_6_k9_6,<BR />
+[STEP: 11]k11_3_k10_6,<BR />
+[STEP: 12]k12_3_k11_3,<BR />
+[STEP: 13]k13_6_k12_3,<BR />
+[STEP: 14]k14_6_k13_6,<BR />
+[STEP: 15]k15_0_k14_6,<BR />
+>]
+     fontsize="12" 
+     label = "Line 9 " 
+ }
+subgraph cluster_line_10 {
+ style=filled;
+ color=lightgrey; 
+     node [style=filled,color=white]; 
+k10_6_k9_6 [label=<<BR /> ID: k10_6_k9_6 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
+[STEP: 7]k7_1_k6_0,<BR />
+[STEP: 8]k8_0_k7_1,<BR />
+[STEP: 9]k9_6_k8_0,<BR />
+[STEP: 10]k10_6_k9_6,<BR />
+[STEP: 11]k11_3_k10_6,<BR />
+[STEP: 12]k12_3_k11_3,<BR />
+[STEP: 13]k13_6_k12_3,<BR />
+[STEP: 14]k14_6_k13_6,<BR />
+[STEP: 15]k15_0_k14_6,<BR />
+>]
+     fontsize="12" 
+     label = "Line 10 " 
+ }
+subgraph cluster_line_11 {
+ style=filled;
+ color=lightgrey; 
+     node [style=filled,color=white]; 
+k11_3_k10_6 [label=<<BR /> ID: k11_3_k10_6 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
+[STEP: 7]k7_1_k6_0,<BR />
+[STEP: 8]k8_0_k7_1,<BR />
+[STEP: 9]k9_6_k8_0,<BR />
+[STEP: 10]k10_6_k9_6,<BR />
+[STEP: 11]k11_3_k10_6,<BR />
+[STEP: 12]k12_3_k11_3,<BR />
+[STEP: 13]k13_6_k12_3,<BR />
+[STEP: 14]k14_6_k13_6,<BR />
+[STEP: 15]k15_0_k14_6,<BR />
+>]
+     fontsize="12" 
+     label = "Line 11 " 
+ }
+subgraph cluster_line_12 {
+ style=filled;
+ color=lightgrey; 
+     node [style=filled,color=white]; 
+k12_3_k11_3 [label=<<BR /> ID: k12_3_k11_3 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
+[STEP: 7]k7_1_k6_0,<BR />
+[STEP: 8]k8_0_k7_1,<BR />
+[STEP: 9]k9_6_k8_0,<BR />
+[STEP: 10]k10_6_k9_6,<BR />
+[STEP: 11]k11_3_k10_6,<BR />
+[STEP: 12]k12_3_k11_3,<BR />
+[STEP: 13]k13_6_k12_3,<BR />
+[STEP: 14]k14_6_k13_6,<BR />
+[STEP: 15]k15_0_k14_6,<BR />
+>]
+     fontsize="12" 
+     label = "Line 12 " 
+ }
+subgraph cluster_line_13 {
+ style=filled;
+ color=lightgrey; 
+     node [style=filled,color=white]; 
+k13_6_k12_3 [label=<<BR /> ID: k13_6_k12_3 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
+[STEP: 7]k7_1_k6_0,<BR />
+[STEP: 8]k8_0_k7_1,<BR />
+[STEP: 9]k9_6_k8_0,<BR />
+[STEP: 10]k10_6_k9_6,<BR />
+[STEP: 11]k11_3_k10_6,<BR />
+[STEP: 12]k12_3_k11_3,<BR />
+[STEP: 13]k13_6_k12_3,<BR />
+[STEP: 14]k14_6_k13_6,<BR />
+[STEP: 15]k15_0_k14_6,<BR />
+>]
+     fontsize="12" 
+     label = "Line 13 " 
+ }
+subgraph cluster_line_14 {
+ style=filled;
+ color=lightgrey; 
+     node [style=filled,color=white]; 
+k14_6_k13_6 [label=<<BR /> ID: k14_6_k13_6 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
+[STEP: 7]k7_1_k6_0,<BR />
+[STEP: 8]k8_0_k7_1,<BR />
+[STEP: 9]k9_6_k8_0,<BR />
+[STEP: 10]k10_6_k9_6,<BR />
+[STEP: 11]k11_3_k10_6,<BR />
+[STEP: 12]k12_3_k11_3,<BR />
+[STEP: 13]k13_6_k12_3,<BR />
+[STEP: 14]k14_6_k13_6,<BR />
+[STEP: 15]k15_0_k14_6,<BR />
+>]
+     fontsize="12" 
+     label = "Line 14 " 
+ }
+subgraph cluster_line_15 {
+ style=filled;
+ color=lightgrey; 
+     node [style=filled,color=white]; 
+k15_0_k14_6 [label=<<BR /> ID: k15_0_k14_6 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
+[STEP: 7]k7_1_k6_0,<BR />
+[STEP: 8]k8_0_k7_1,<BR />
+[STEP: 9]k9_6_k8_0,<BR />
+[STEP: 10]k10_6_k9_6,<BR />
+[STEP: 11]k11_3_k10_6,<BR />
+[STEP: 12]k12_3_k11_3,<BR />
+[STEP: 13]k13_6_k12_3,<BR />
+[STEP: 14]k14_6_k13_6,<BR />
+[STEP: 15]k15_0_k14_6,<BR />
+>]
+     fontsize="12" 
+     label = "Line 15 " 
+ }
+k0_1_r -> k1_0_k0_1
+k1_0_k0_1 -> k2_1_k1_0
+k2_1_k1_0 -> k3_0_k2_1
+k3_0_k2_1 -> k4_0_k3_0
+k4_0_k3_0 -> k5_1_k4_0
+k5_1_k4_0 -> k6_0_k5_1
+k6_0_k5_1 -> k7_1_k6_0
+k7_1_k6_0 -> k8_0_k7_1
+k8_0_k7_1 -> k9_6_k8_0
+k9_6_k8_0 -> k10_6_k9_6
+k10_6_k9_6 -> k11_3_k10_6
+k11_3_k10_6 -> k12_3_k11_3
+k12_3_k11_3 -> k13_6_k12_3
+k13_6_k12_3 -> k14_6_k13_6
+k14_6_k13_6 -> k15_0_k14_6
+}

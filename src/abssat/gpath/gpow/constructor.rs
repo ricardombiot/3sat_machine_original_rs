@@ -15,7 +15,6 @@ impl GPow {
         let review_owners: bool = false;
         let is_valid: bool = true;
 
-
         Self {
             lines_table, 
             owners_table,

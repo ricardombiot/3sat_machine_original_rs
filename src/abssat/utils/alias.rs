@@ -13,6 +13,8 @@ use std::collections::HashSet;
 pub type SetNodesId = HashSet<NodeId>;
 pub type SetPathNodesId = HashSet<PathNodeId>;
 
+
+
 pub fn create_new_path_id(id : NodeId, parent_id : OptionalNodeId) -> PathNodeId {
     let parent_id = match parent_id {
         None => (-1,0),
