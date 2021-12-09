@@ -12,7 +12,7 @@ impl GPow {
         let nodes_to_remove : SetPathNodesId = SetPathNodesId::new(); 
         let current_step: Step = 0;
         let map_parent_id: OptionalNodeId = None;
-        let review_owners: bool = false;
+        //let review_owners: bool = false;
         let is_valid: bool = true;
 
         Self {
@@ -22,7 +22,6 @@ impl GPow {
             nodes_to_remove,
             current_step,
             map_parent_id,
-            review_owners,
             is_valid
         }
     }

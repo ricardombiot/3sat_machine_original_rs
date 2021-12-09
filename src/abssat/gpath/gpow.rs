@@ -13,7 +13,6 @@ pub struct GPow {
     nodes_to_remove : SetPathNodesId,
     current_step : Step,
     map_parent_id : OptionalNodeId,
-    review_owners : bool,
     is_valid : bool
 }
 
