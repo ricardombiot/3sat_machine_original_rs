@@ -1,0 +1,5 @@
+Num. Instance: 1000
+Num. Valid Machine Sat: 1000
+Ratio MSatRs: 100.0
+- - -
+Num. UNSAT instances: 1
