@@ -3,6 +3,7 @@ pub mod abssat {
     pub mod utils;
     pub mod sat_machine;
     pub mod reader;
+    pub mod reader_exp;
 }
 
 #[cfg(test)]

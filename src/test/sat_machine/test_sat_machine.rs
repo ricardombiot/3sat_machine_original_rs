@@ -1,7 +1,8 @@
 use std::time::Instant;
+use crate::abssat::reader_exp::ReaderExp;
 use crate::abssat::sat_machine::SatMachine;
 use crate::abssat::gpath::path_diagram::PathDiagram;
-use crate::abssat::reader::Reader;
+use crate::abssat::reader::{self, Reader};
 
 #[test]
 fn test_sat_machine_simple(){
@@ -66,5 +67,25 @@ fn test_sat_machine_simple_v4(){
     println!("SOLUTION: {:?}", reader.get_solution());
 
     assert_eq!(*reader.get_solution(), [true, true, false, false].to_vec());
+
+}
+
+#[test]
+fn test_sat_machine_or123(){
+    let n_vars= 3;
+    let mut machine = SatMachine::new(n_vars);
+
+    machine.make_step((1,2,3));
+    machine.make_close_step();
+
+    let gpath = machine.get_gpath_fusion();
+    let mut diagram = PathDiagram::new(&gpath);
+    diagram.build_diagram();
+    diagram.to_png("sat_machine_or123", "test_visual");
+
+    let mut reader_exp = ReaderExp::new(&machine);
+    reader_exp.read();
+
+    println!("{:?}",reader_exp.get_list_solutions());
 
 }

@@ -6,22 +6,18 @@ use crate::abssat::utils::alias::{SetNodesId};
 
 impl Reader {
 
-    fn is_stop_step(&self) -> bool {
-        return self.current_step >= self.get_stop_step();
-    }
-
     pub fn read(&mut self){
-        while !self.is_stop_step() {
+        while !self.is_finished() {
             //println!("Reader step: {}", self.current_step);
             self.read_step()
         }
     }
 
-    fn read_step(&mut self){
-        self.select_id();
-        self.register_selection();
-        self.filter_gpath();
-        self.current_step += 2;
+    pub fn read_step(&mut self){
+        if !self.is_finished() {
+            self.select_id();
+            self.make_step_register_and_filter();
+        }
     }
 
     fn select_id(&mut self){
@@ -51,4 +47,18 @@ impl Reader {
         self.gpath.do_filter(requires);
     }
 
+
+    pub fn make_step_register_and_filter(&mut self){
+        self.register_selection();
+        self.filter_gpath();
+        self.current_step += 2;
+
+        if self.is_stop_step() {
+            self.is_finished = true;
+        }
+    }
+
+    fn is_stop_step(&self) -> bool {
+        return self.current_step >= self.get_stop_step();
+    }
 }

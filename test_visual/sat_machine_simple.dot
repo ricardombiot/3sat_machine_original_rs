@@ -68,22 +68,22 @@ subgraph cluster_line_3 {
  style=filled;
  color=lightgrey; 
      node [style=filled,color=white]; 
-k3_0_k2_1 [label=<<BR /> ID: k3_0_k2_1 <BR /> <BR />
-[STEP: 0]k0_1_r,<BR />
-[STEP: 1]k1_0_k0_1,<BR />
-[STEP: 2]k2_1_k1_0,<BR />
-[STEP: 3]k3_0_k2_1,<BR />
-[STEP: 4]k4_0_k3_0,k4_1_k3_0,<BR />
-[STEP: 5]k5_1_k4_0,k5_0_k4_1,<BR />
-[STEP: 6]k6_0_k5_0,k6_0_k5_1,<BR />
-[STEP: 7]k7_6_k6_0,<BR />
-[STEP: 8]k8_0_k7_6,<BR />
->]k3_1_k2_0 [label=<<BR /> ID: k3_1_k2_0 <BR /> <BR />
+k3_1_k2_0 [label=<<BR /> ID: k3_1_k2_0 <BR /> <BR />
 [STEP: 0]k0_1_r,<BR />
 [STEP: 1]k1_0_k0_1,<BR />
 [STEP: 2]k2_0_k1_0,<BR />
 [STEP: 3]k3_1_k2_0,<BR />
 [STEP: 4]k4_0_k3_1,k4_1_k3_1,<BR />
+[STEP: 5]k5_1_k4_0,k5_0_k4_1,<BR />
+[STEP: 6]k6_0_k5_0,k6_0_k5_1,<BR />
+[STEP: 7]k7_6_k6_0,<BR />
+[STEP: 8]k8_0_k7_6,<BR />
+>]k3_0_k2_1 [label=<<BR /> ID: k3_0_k2_1 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,k4_1_k3_0,<BR />
 [STEP: 5]k5_1_k4_0,k5_0_k4_1,<BR />
 [STEP: 6]k6_0_k5_0,k6_0_k5_1,<BR />
 [STEP: 7]k7_6_k6_0,<BR />
@@ -96,27 +96,7 @@ subgraph cluster_line_4 {
  style=filled;
  color=lightgrey; 
      node [style=filled,color=white]; 
-k4_1_k3_0 [label=<<BR /> ID: k4_1_k3_0 <BR /> <BR />
-[STEP: 0]k0_1_r,<BR />
-[STEP: 1]k1_0_k0_1,<BR />
-[STEP: 2]k2_1_k1_0,<BR />
-[STEP: 3]k3_0_k2_1,<BR />
-[STEP: 4]k4_1_k3_0,<BR />
-[STEP: 5]k5_0_k4_1,<BR />
-[STEP: 6]k6_0_k5_0,<BR />
-[STEP: 7]k7_6_k6_0,<BR />
-[STEP: 8]k8_0_k7_6,<BR />
->]k4_1_k3_1 [label=<<BR /> ID: k4_1_k3_1 <BR /> <BR />
-[STEP: 0]k0_1_r,<BR />
-[STEP: 1]k1_0_k0_1,<BR />
-[STEP: 2]k2_0_k1_0,<BR />
-[STEP: 3]k3_1_k2_0,<BR />
-[STEP: 4]k4_1_k3_1,<BR />
-[STEP: 5]k5_0_k4_1,<BR />
-[STEP: 6]k6_0_k5_0,<BR />
-[STEP: 7]k7_6_k6_0,<BR />
-[STEP: 8]k8_0_k7_6,<BR />
->]k4_0_k3_1 [label=<<BR /> ID: k4_0_k3_1 <BR /> <BR />
+k4_0_k3_1 [label=<<BR /> ID: k4_0_k3_1 <BR /> <BR />
 [STEP: 0]k0_1_r,<BR />
 [STEP: 1]k1_0_k0_1,<BR />
 [STEP: 2]k2_0_k1_0,<BR />
@@ -136,6 +116,26 @@ k4_1_k3_0 [label=<<BR /> ID: k4_1_k3_0 <BR /> <BR />
 [STEP: 6]k6_0_k5_1,<BR />
 [STEP: 7]k7_6_k6_0,<BR />
 [STEP: 8]k8_0_k7_6,<BR />
+>]k4_1_k3_0 [label=<<BR /> ID: k4_1_k3_0 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_1_k1_0,<BR />
+[STEP: 3]k3_0_k2_1,<BR />
+[STEP: 4]k4_1_k3_0,<BR />
+[STEP: 5]k5_0_k4_1,<BR />
+[STEP: 6]k6_0_k5_0,<BR />
+[STEP: 7]k7_6_k6_0,<BR />
+[STEP: 8]k8_0_k7_6,<BR />
+>]k4_1_k3_1 [label=<<BR /> ID: k4_1_k3_1 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_0_k1_0,<BR />
+[STEP: 3]k3_1_k2_0,<BR />
+[STEP: 4]k4_1_k3_1,<BR />
+[STEP: 5]k5_0_k4_1,<BR />
+[STEP: 6]k6_0_k5_0,<BR />
+[STEP: 7]k7_6_k6_0,<BR />
+[STEP: 8]k8_0_k7_6,<BR />
 >]
      fontsize="12" 
      label = "Line 4 " 
@@ -144,17 +144,7 @@ subgraph cluster_line_5 {
  style=filled;
  color=lightgrey; 
      node [style=filled,color=white]; 
-k5_1_k4_0 [label=<<BR /> ID: k5_1_k4_0 <BR /> <BR />
-[STEP: 0]k0_1_r,<BR />
-[STEP: 1]k1_0_k0_1,<BR />
-[STEP: 2]k2_0_k1_0,k2_1_k1_0,<BR />
-[STEP: 3]k3_1_k2_0,k3_0_k2_1,<BR />
-[STEP: 4]k4_0_k3_0,k4_0_k3_1,<BR />
-[STEP: 5]k5_1_k4_0,<BR />
-[STEP: 6]k6_0_k5_1,<BR />
-[STEP: 7]k7_6_k6_0,<BR />
-[STEP: 8]k8_0_k7_6,<BR />
->]k5_0_k4_1 [label=<<BR /> ID: k5_0_k4_1 <BR /> <BR />
+k5_0_k4_1 [label=<<BR /> ID: k5_0_k4_1 <BR /> <BR />
 [STEP: 0]k0_1_r,<BR />
 [STEP: 1]k1_0_k0_1,<BR />
 [STEP: 2]k2_0_k1_0,k2_1_k1_0,<BR />
@@ -162,6 +152,16 @@ k5_1_k4_0 [label=<<BR /> ID: k5_1_k4_0 <BR /> <BR />
 [STEP: 4]k4_1_k3_0,k4_1_k3_1,<BR />
 [STEP: 5]k5_0_k4_1,<BR />
 [STEP: 6]k6_0_k5_0,<BR />
+[STEP: 7]k7_6_k6_0,<BR />
+[STEP: 8]k8_0_k7_6,<BR />
+>]k5_1_k4_0 [label=<<BR /> ID: k5_1_k4_0 <BR /> <BR />
+[STEP: 0]k0_1_r,<BR />
+[STEP: 1]k1_0_k0_1,<BR />
+[STEP: 2]k2_0_k1_0,k2_1_k1_0,<BR />
+[STEP: 3]k3_1_k2_0,k3_0_k2_1,<BR />
+[STEP: 4]k4_0_k3_0,k4_0_k3_1,<BR />
+[STEP: 5]k5_1_k4_0,<BR />
+[STEP: 6]k6_0_k5_1,<BR />
 [STEP: 7]k7_6_k6_0,<BR />
 [STEP: 8]k8_0_k7_6,<BR />
 >]
@@ -237,16 +237,16 @@ k1_0_k0_1 -> k2_0_k1_0
 k1_0_k0_1 -> k2_1_k1_0
 k2_1_k1_0 -> k3_0_k2_1
 k2_0_k1_0 -> k3_1_k2_0
-k3_0_k2_1 -> k4_1_k3_0
-k3_0_k2_1 -> k4_0_k3_0
 k3_1_k2_0 -> k4_1_k3_1
 k3_1_k2_0 -> k4_0_k3_1
-k4_1_k3_0 -> k5_0_k4_1
-k4_1_k3_1 -> k5_0_k4_1
+k3_0_k2_1 -> k4_0_k3_0
+k3_0_k2_1 -> k4_1_k3_0
 k4_0_k3_1 -> k5_1_k4_0
 k4_0_k3_0 -> k5_1_k4_0
-k5_1_k4_0 -> k6_0_k5_1
+k4_1_k3_0 -> k5_0_k4_1
+k4_1_k3_1 -> k5_0_k4_1
 k5_0_k4_1 -> k6_0_k5_0
+k5_1_k4_0 -> k6_0_k5_1
 k6_0_k5_1 -> k7_6_k6_0
 k6_0_k5_0 -> k7_6_k6_0
 k7_6_k6_0 -> k8_0_k7_6
