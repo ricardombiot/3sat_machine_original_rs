@@ -9,7 +9,8 @@ function main(args)
         base_path_instances = "./output/instances"
         base_path_solver_ex = "./output/solver_exhaustive"
         base_path_solver_machine_rs = "./output/solver_sat_machine_rs"
-
+        
+        write_metainfo("./output/metainfo.txt", args)
         mkdir(base_path_instances)
         mkdir(base_path_solver_ex)
         mkdir(base_path_solver_machine_rs)
@@ -25,6 +26,14 @@ function main(args)
     cd("./../")
     command_execute = Cmd(["julia","./execute_set.jl"])
     run(command_execute)
+end
+
+function write_metainfo(path, args)
+    open(path, "w") do io
+        for param in args
+            write(io, "$(param)\n")
+        end 
+    end
 end
 
 main(ARGS)

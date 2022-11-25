@@ -37,13 +37,23 @@ function main()
     ratio_machine_sat = (n_valid_machine_sat/n_instances)*100
     ratio_machine_rs_sat = (n_valid_machine_rs_sat/n_instances)*100
 
+    flag_result = "OK"
+    if ratio_machine_rs_sat != 100.0
+        flag_result = "ERROR - Ratio is not 100.0%"
+    end
+
     report_lines = ["Num. Instance: $n_instances",
             "Num. Valid Machine Sat: $n_valid_machine_rs_sat",
-            "Ratio MSatRs: $ratio_machine_rs_sat",
-            "- - -", "Num. UNSAT instances: $n_unsat"]
+            "Ratio MSatRs: $ratio_machine_rs_sat%",
+            "- - -", "Num. UNSAT instances: $n_unsat",
+            "- - -", "RESULT: [$flag_result]"
+            ]
+
     write_report!(path_report, report_lines)
 
-
+    if flag_result != "OK"
+        throw("Grave Error... RATIO SHOULD BE 100.0%")
+    end
 end
 
 function write_report!(path_report, lines)
